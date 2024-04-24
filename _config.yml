@@ -6,7 +6,7 @@ title: CFD Notes # the website title (if blank, full name will be used instead)
 first_name:
 middle_name:
 last_name:
-email: lakomy.petr@outlook.com
+email: cfd-notes@outlook.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A website with notes on everything related to Fluid Mechanics.
 footer_text: >
