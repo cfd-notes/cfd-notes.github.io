@@ -198,7 +198,7 @@ let transTheme = () => {
 let determineThemeSetting = () => {
   let themeSetting = localStorage.getItem("theme");
   if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") {
-    themeSetting = "light";
+    themeSetting = "system";
   }
   return themeSetting;
 };
@@ -231,5 +231,10 @@ let initTheme = () => {
     mode_toggle.addEventListener("click", function () {
       toggleThemeSetting();
     });
+  });
+
+  // Add event listener to the system theme preference change.
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+    applyTheme();
   });
 };
