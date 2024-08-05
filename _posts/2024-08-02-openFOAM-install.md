@@ -168,7 +168,7 @@ sudo apt-get install openfoam2406-default
 openfoam2406
 ```
 
-Curl is used to download a file (script) from https://dl.openfoam.com/add-debian-repo.sh, and then it is 'passed' to bash for execution using |. This script adds the OpenFOAM repository to our Ubuntu system, so we can then simply update and install it. Running scripts from untrusted sources can be dangerous, and we should check what we are actually executing. Since sudo is used, you will be asked for your password.
+Curl is used to download a file (script) from https://dl.openfoam.com/add-debian-repo.sh, and then it is 'passed' to bash for execution using pipe. This script adds the OpenFOAM repository to our Ubuntu system, so we can then simply update and install it. Running scripts from untrusted sources can be dangerous, and we should check what we are actually executing. Since sudo is used, you will be asked for your password.
 
 {% details OpenFOAM Installation in WSL Ubuntu terminal%}
 
