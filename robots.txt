@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://cfd-notes.github.io/sitemap.xml
+Sitemap: https://cfd-notes.com/sitemap.xml
