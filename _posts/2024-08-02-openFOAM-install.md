@@ -132,7 +132,7 @@ wsl --install -d <Distro>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/2024-08-02-openFOAM-install/wsl_another_distro_2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/2024-08-02-openFOAM-install/wsl_another_distro.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 {% enddetails %}
