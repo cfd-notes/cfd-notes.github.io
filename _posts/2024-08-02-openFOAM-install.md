@@ -30,7 +30,7 @@ toc:
 
 In this post, I will go through OpenFOAM-v2406 installation process on Ubuntu 24.04 LTS and Windows 11.
 
-First of all, what is OpenFOAM? OpenFOAM stands for Open Source Field Operation and Manipulation and it is free<d-footnote>You dont have to pay anything for OpenFOAM (free as a free beer), but mainly free in context of freedom. You can run the OpenFOAM as you want even for comercial purpose, you can change its code and redistribute it, you can even try to sell copies of OpenFOAM if you think that its good idea.</d-footnote> open source CFD software. Released under GNU General Public License. It contains pre-written collection of code in C++ that can be used to build solvers for computing a large spectrum of problems from continuum mechanics. Luckily, it also includes a set of tutorials that can be modified to suit our needs. Main focus is given to finite volume method (FVM) and fluid mechanics.
+First of all, what is OpenFOAM? OpenFOAM stands for Open Source Field Operation and Manipulation and it is free<d-footnote>You dont have to pay anything for OpenFOAM (free as a free beer), but mainly free in context of freedom. You can run the OpenFOAM as you want even for comercial purpose, you can change its code and redistribute it, you can even try to sell copies of OpenFOAM if you think that its good idea.</d-footnote> open source CFD software. Released under GNU General Public License. It contains pre-written collection of code in C++ that can be used to build solvers and utilities for pre-processing, solving and post-processing a large spectrum of problems from continuum mechanics. Luckily, it also includes a large set of tutorials that can be modified to suit our needs. Main focus is given to finite volume method (FVM) and fluid mechanics.
 
 At the beginning, we will face the question of which version of OpenFOAM to begin with. Simply put, we have two main options. One is from OpenCFD Ltd, which is part of the ESI Group and whose distribution can be found at [openfoam.com](https://www.openfoam.com/). The other option is from the OpenFOAM Foundation at [openfoam.org](https://openfoam.org/).
 
@@ -82,7 +82,7 @@ OS build 22631.3880\
 Experience Windows Feature Experience Pack 1000.22700.1020.0
 {% enddetails %}
 
-We are going to install everything needed for WSL using a PowerShell command, as suggested by the WSL documentation.<d-cite key="WSL_Doc"></d-cite>.
+We are going to install everything needed for WSL using a PowerShell command, as suggested by the WSL documentation <d-cite key="WSL_Doc"></d-cite>.
 
 ```powershell
 wsl --install
@@ -152,7 +152,7 @@ You can then easily find your installed distribution in your Windows Apps.
 
 ## OpenFOAM install on Ubuntu (via WSL)
 
-Now, we will finally install OpenFOAM. We can simply follow the quick-start steps from the OpenFOAM wiki for installing precompiled packages on Ubuntu.<d-cite key="OpenFOAM_wiki_install_Ubuntu"></d-cite>. So, in the Ubuntu terminal, we pass:
+Now, we will finally install OpenFOAM. We can simply follow the quick-start steps from the OpenFOAM wiki for installing precompiled packages on Ubuntu <d-cite key="OpenFOAM_wiki_install_Ubuntu"></d-cite>. So, in the Ubuntu terminal, we pass:
 
 ```bash
 # Add the repository
