@@ -302,7 +302,7 @@ jekyll-archives:
     category: "/blog/category/:name/"
 
 display_tags: ["Install"] # these tags will be displayed on the front page of your blog
-display_categories: ["OpenFOAM"] # these categories will be displayed on the front page of your blog
+display_categories: ["OpenFOAM", "ParaView"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
