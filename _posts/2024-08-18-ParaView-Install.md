@@ -27,6 +27,7 @@ toc:
   - subsections:
       - name: App Center
       - name: Binaries
+      - name: Build from source
 ---
 
 ## Introduction
@@ -185,3 +186,45 @@ This solved the mentioned error, and it was possible to successfully run ParaVie
 </div>
 
 {% enddetails %}
+
+### Build from source
+
+ParaView provides well-written steps on how to build it from source code, which can be found on [GitHub](https://github.com/Kitware/ParaView) or [GitLab](https://gitlab.kitware.com/paraview/paraview). The [Getting Started compilation guide](https://github.com/Kitware/ParaView/blob/master/Documentation/dev/build.md) is especially user-friendly and a good starting point, so we will follow it.
+
+We can create a folder named ParaView and clone the GitHub repository into it.
+
+```bash
+git clone https://gitlab.kitware.com/paraview/paraview.git
+```
+
+Next, create a folder where ParaView will be built.
+
+```bash
+mkdir paraview_build
+```
+
+Then, change the working directory to the cloned repository.
+
+```bash
+mkdir paraview
+```
+
+We will switch to the point where the repository was tagged as v5.13.0.
+
+```bash
+git checkout tag v5.13.0
+git submodule update --init --recursive
+```
+
+Move to our build directory.
+
+```bash
+cd ../paraview_build
+```
+
+Here, we can finally build the chosen version of ParaView.
+
+```bash
+cmake -GNinja -DPARAVIEW_USE_PYTHON=ON -DPARAVIEW_USE_MPI=ON -DVTK_SMP_IMPLEMENTATION_TYPE=TBB -DCMAKE_BUILD_TYPE=Release ../paraview
+ninja
+```
