@@ -206,7 +206,7 @@ mkdir paraview_build
 Then, change the working directory to the cloned repository.
 
 ```bash
-mkdir paraview
+cd paraview
 ```
 
 We will switch to the point where the repository was tagged as v5.13.0.
