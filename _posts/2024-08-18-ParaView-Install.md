@@ -191,6 +191,12 @@ This solved the mentioned error, and it was possible to successfully run ParaVie
 
 ParaView provides well-written steps on how to build it from source code, which can be found on [GitHub](https://github.com/Kitware/ParaView) or [GitLab](https://gitlab.kitware.com/paraview/paraview). The [Getting Started compilation guide](https://github.com/Kitware/ParaView/blob/master/Documentation/dev/build.md) is especially user-friendly and a good starting point, so we will follow it.
 
+First of all, we'll need to install all the necessary dependencies for building.
+
+```bash
+sudo apt-get install git cmake build-essential libgl1-mesa-dev libxt-dev libqt5x11extras5-dev libqt5help5 qttools5-dev qtxmlpatterns5-dev-tools libqt5svg5-dev python3-dev python3-numpy libopenmpi-dev libtbb-dev ninja-build qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
+```
+
 We can create a folder named ParaView and clone the GitHub repository into it.
 
 ```bash
