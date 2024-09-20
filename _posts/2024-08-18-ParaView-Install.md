@@ -7,6 +7,9 @@ categories: ParaView
 giscus_comments: false
 date: 2024-08-18
 featured: true
+images:
+  compare: true
+  slider: true
 
 bibliography: 2024-08-18-ParaView-install.bib
 
@@ -28,6 +31,7 @@ toc:
       - name: App Center
       - name: Binaries
       - name: Build from source
+      - name: Dark Mode
 ---
 
 ## Introduction
@@ -234,3 +238,56 @@ Here, we can finally build the chosen version of ParaView.
 cmake -GNinja -DPARAVIEW_USE_PYTHON=ON -DPARAVIEW_USE_MPI=ON -DVTK_SMP_IMPLEMENTATION_TYPE=TBB -DCMAKE_BUILD_TYPE=Release ../paraview
 ninja
 ```
+
+### Dark Mode
+
+If you built ParaView from source code, there is an easy way to enable the dark theme <d-cite key="ParaView_Dark_UI"></d-cite>. First, we install a small utility that allows us to configure the settings of programs using Qt<d-footnote>A list of applications using Qt can be found at https://en.wikipedia.org/wiki/Qt_(software) I would specifically highlight FreeCAD, Maya, 3ds Max, and, of course, ParaView from that list.</d-footnote>.
+
+```bash
+sudo apt install qt5ct
+```
+
+It is also necessary to properly set the environment variable QT_QPA_PLATFORMTHEME to qt5ct. You will likely need to log out and log back in to the system (or restart) for qt5ct to work correctly.
+
+```bash
+echo "export QT_QPA_PLATFORMTHEME=qt5ct" >> ~/.profile
+```
+
+Depending on the styles already installed, it is also possible that you won't have many to choose from. In my case, I had only two: Windows and Fusion.
+
+{% details Initial state of qt5ct %}
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/2024-08-18-ParaView-Install/qt5ct_Initial.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
+{% enddetails %}
+
+More styles can be obtained by installing qt5-style-plugins.
+
+```bash
+sudo apt install qt5-style-plugins
+```
+
+{% details After installing qt5-style-plugins %}
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/2024-08-18-ParaView-Install/qt5ct_plugins.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
+{% enddetails %}
+
+The comparison between the initial style and dark mode can be seen below.
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/2024-08-18-ParaView-Install/ParaView_Initial.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/2024-08-18-ParaView-Install/ParaView_Plugin.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
